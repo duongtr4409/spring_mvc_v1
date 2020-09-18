@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir = "/decorators">
+
+	<!-- Apply giao dien admin -->
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+	
+	<!-- Apply giao dien web -->
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
+	<!-- Apply dien dien login -->
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap*</pattern>
+	</decorator>
+	
+	<!-- Khong aplly giao dien -->
+	<excludes>
+		<pattern>/api*</pattern>
+	</excludes>
+</decorators>

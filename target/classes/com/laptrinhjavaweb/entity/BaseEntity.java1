@@ -1,0 +1,85 @@
+package com.laptrinhjavaweb.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public abstract class BaseEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "createby", length = 89)
+	private String createBy;
+
+	@Column(name = "createddate")
+	private Date createdDate;
+
+	@Column(name = "modifyby", length = 89)
+	private String modifyBy;
+
+	@Column(name = "modifieddate")
+	private Date modifiedDate;
+
+	public BaseEntity(Long id, String createBy, Date createdDate, String modifyBy, Date modifiedDate) {
+		super();
+		this.id = id;
+		this.createBy = createBy;
+		this.createdDate = createdDate;
+		this.modifyBy = modifyBy;
+		this.modifiedDate = modifiedDate;
+	}
+
+	public BaseEntity() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "BaseEntity [id=" + id + ", createBy=" + createBy + ", createdDate=" + createdDate + ", modifyBy="
+				+ modifyBy + ", modifiedDate=" + modifiedDate + "]";
+	}
+
+	public String getCreateBy() {
+		return createBy;
+	}
+
+	public void setCreateBy(String createBy) {
+		this.createBy = createBy;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public String getModifyBy() {
+		return modifyBy;
+	}
+
+	public void setModifyBy(String modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+
+	public Date getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+}
