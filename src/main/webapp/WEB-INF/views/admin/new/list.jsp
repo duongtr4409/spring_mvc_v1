@@ -1,27 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Home Page</title>
-</head>
-<body>
 
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Danh sách bài viết</title>
+	</head>
 
-	<div class="container-fluid">
-
-
-
+	<body>
 		<div class="main-content">
-			<form action="#" id="formSubmit" method="get">
-
+		<form action="#" id="formSubmit" method="get">
+			
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-							<li><i class="ace-icon fa fa-home home-icon"></i> <a
-								href="#">Trang chủ</a></li>
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">Trang chủ</a>
+							</li>
 						</ul>
 						<!-- /.breadcrumb -->
 					</div>
@@ -33,16 +32,17 @@
 										<div class="pull-right tableTools-container">
 											<div class="dt-buttons btn-overlap btn-group">
 												<a flag="info"
-													class="dt-button buttons-colvis btn btn-white btn-primary btn-bold"
-													data-toggle="tooltip" title='Thêm bài viết' href='#'> <span>
-														<i class="fa fa-plus-circle bigger-110 purple"></i>
-												</span>
+												   class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
+												   title='Thêm bài viết' href='#'>
+															<span>
+																<i class="fa fa-plus-circle bigger-110 purple"></i>
+															</span>
 												</a>
 												<button id="btnDelete" type="button"
-													class="dt-button buttons-html5 btn btn-white btn-primary btn-bold"
-													data-toggle="tooltip" title='Xóa bài viết'>
-													<span> <i class="fa fa-trash-o bigger-110 pink"></i>
-													</span>
+														class="dt-button buttons-html5 btn btn-white btn-primary btn-bold" data-toggle="tooltip" title='Xóa bài viết'>
+																<span>
+																	<i class="fa fa-trash-o bigger-110 pink"></i>
+																</span>
 												</button>
 											</div>
 										</div>
@@ -64,17 +64,18 @@
 														<tr>
 															<td>${item.title}</td>
 															<td>${item.shortDescription}</td>
-															<td><a class="btn btn-sm btn-primary btn-edit"
-																data-toggle="tooltip" title="Cập nhật bài viết" href='#'><i
-																	class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+															<td>																
+																<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+																   title="Cập nhật bài viết" href='#'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+																</a>
 															</td>
 														</tr>
 													</c:forEach> --%>
 												</tbody>
 											</table>
 											
-											 <ul class="pagination" id="pagination"></ul>
-											 
+											<ul class="pagination" id="pagination"></ul>								
+										
 										</div>
 									</div>
 								</div>
@@ -82,29 +83,21 @@
 						</div>
 					</div>
 				</div>
-			</form>
+		</form>
 		</div>
 		<!-- /.main-content -->
-
-
-
-
-
-	</div>
-	<!-- /.container-fluid -->
-
-	<script>
-		 $(function () {
-		        window.pagObj = $('#pagination').twbsPagination({
-		            totalPages: 35,
-		            visiblePages: 10,
-		            onPageClick: function (event, page) {
-		                console.info(page + ' (from options)');
-		            }
-		        }).on('page', function (event, page) {
-		            console.info(page + ' (from event listening)');
-		        });
-	     });
-	</script>
-</body>
-</html>
+		<script>
+		$(function () {
+	        window.pagObj = $('#pagination').twbsPagination({
+	            totalPages: 35,
+	            visiblePages: 10,
+	            onPageClick: function (event, page) {
+	                console.info(page + ' (from options)');
+	            }
+	        }).on('page', function (event, page) {
+	            console.info(page + ' (from event listening)');
+	        });
+	    });
+		</script>
+	</body>
+	</html>
