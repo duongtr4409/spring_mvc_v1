@@ -1,6 +1,7 @@
-package com.laptrinhjavaweb.dto;
+package com.laptrinhjavaweb.model;
 
-public class NewDTO extends AbstractDTO<NewDTO> {
+public class NewModel extends AbstractModel<NewModel> {
+
 	private String title;
 	private String thumbnail;
 	private String shortDescription;
