@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AbstractDTO<T> {
 
-	private Long ID;
+	private Long id;
 	private Timestamp createDate;
 	private Timestamp modifiedDate;
 	private String createBy;
@@ -13,7 +13,7 @@ public class AbstractDTO<T> {
 	private long[] ids;
 	private List<T> listResult;
 	private Integer page;
-	private Integer maxPageItem;
+	private Integer limit;
 	private Integer totalPage;
 	private Integer totalItem;
 	private String sortName;
@@ -22,12 +22,12 @@ public class AbstractDTO<T> {
 	private String message;
 	private String type;
 
-	public Long getID() {
-		return ID;
+	public Long getId() {
+		return id;
 	}
 
-	public void setID(Long iD) {
-		ID = iD;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Timestamp getCreateDate() {
@@ -86,12 +86,12 @@ public class AbstractDTO<T> {
 		this.page = page;
 	}
 
-	public Integer getMaxPageItem() {
-		return maxPageItem;
+	public Integer getLimit() {
+		return limit;
 	}
 
-	public void setMaxPageItem(Integer maxPageItem) {
-		this.maxPageItem = maxPageItem;
+	public void setLimit(Integer maxPageItem) {
+		this.limit = maxPageItem;
 	}
 
 	public Integer getTotalPage() {
